@@ -101,11 +101,11 @@ const Dashboard: React.FC = () => {
                 <tr key={transaction.id}>
                 <td className="title">{transaction.title}</td>
                 <td className={transaction.type}>
-                  {transaction.type == 'outcome' && '-'}
+                  {transaction.type == 'outcome' && ' - '}
                   {transaction.formattedValue}
                 </td>
                 <td>{transaction.category.title}</td>
-                <td>20/04/2020</td>
+                <td>{transaction.formattedDate}</td>
               </tr>
               ))}
             </tbody>
